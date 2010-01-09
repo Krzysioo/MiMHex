@@ -97,6 +97,7 @@ class Move {
 // -----------------------------------------------------------------------------
 
 class Board {
+
  public:
   const static Board Empty();
 
