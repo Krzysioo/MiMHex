@@ -19,17 +19,25 @@ public:
 	void Change(HashColor color, uint normal_position, bool);
 	void Change(HashColor color, uint row, uint column);
 	void Change(HashColor color, const std::string &position);
+	void Change(const std::string &color, const std::string &position);
 
 	uint Hash(HashColor color, uint position);
 	uint Hash(HashColor color, uint normal_position, bool);
 	uint Hash(HashColor color, uint row, uint column);
 	uint Hash(HashColor color, const std::string &position);
+	uint Hash(const std::string &color, const std::string &position);
 
+    const uint* GetAllHashes() const; 
+    const bool* GetPositionsPlayed() const; 
+    size_t GetBoardSize() const;
+
+    HashColor ParseColor(const std::string &color);
 private:
 	void InitHash(uint *init, uint position);
 
 	uint _total_size;
 	uint _hash_board[kBoardSizeAligned * kBoardSizeAligned];
+    bool _played[kBoardSizeAligned * kBoardSizeAligned];
 };
 
 } // namespace Hex
