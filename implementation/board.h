@@ -7,8 +7,8 @@ typedef unsigned int uint;
 
 namespace Hex {
 
-const uint kBoardSize = 11;
-const uint kBoardSizeAligned = 13;	// kBoardSize + 2
+const uint kBoardSize = 13;
+const uint kBoardSizeAligned = 15;	// kBoardSize + 2
 
 // -----------------------------------------------------------------------------
 
