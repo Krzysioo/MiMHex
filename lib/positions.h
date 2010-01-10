@@ -6,11 +6,11 @@
 namespace Hex {
 
 uint ParsePosition(const std::string &position) {
-	uint row = position[0] - 'a';
-	uint column = position.length() == 2 ? position[1] - '0' :
+	uint column = position[0] - 'a';
+	uint row = position.length() == 2 ? position[1] - '0' :
 		(position[1] - '0') * 10 + position[2] - '0';
 
-	return row * kBoardSize + column - 1;
+	return (row - 1) * kBoardSize + column;
 }
 
 uint normal_rows[kBoardSizeAligned * kBoardSizeAligned];
