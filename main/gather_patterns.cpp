@@ -19,9 +19,9 @@ void printHash(uint hash, std::ostream &o)
 {
 #define GETNUM(x, pos) ".#oX"[(((x) >> (pos)) & 15) >> 2]
 
-    o << " " << GETNUM(hash, 10) << GETNUM(hash, 0) << std::endl
-      << GETNUM(hash, 8) << ".#oX"[hash & 3] << GETNUM(hash, 2) << std::endl
-      << " " << GETNUM(hash, 6) << GETNUM(hash, 4) << std::endl;
+    o << " " << GETNUM(hash, 10) << " " << GETNUM(hash, 0) << std::endl
+      << GETNUM(hash, 8) << " " << ".#oX"[hash & 3] << " " << GETNUM(hash, 2) << std::endl
+      << " " << GETNUM(hash, 6) << " " << GETNUM(hash, 4) << std::endl;
 }
 
 using Hex::HashColor;
